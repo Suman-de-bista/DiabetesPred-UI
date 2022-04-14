@@ -1,0 +1,37 @@
+{% load static %}
+{% include 'sidebar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '\DiabetesPrediction\css\app.css' %}" type="text/css" media="screen" >
+    
+    <title>Result</title>
+</head>
+<body>
+    <div class="predict common" align='center'>
+        <div class="doc-img">
+            <img src="{% static '\DiabetesPrediction\images\doctor1.png' %}"alt='cover'/>
+        </div>
+        <div class="predict-content ">
+            <h1 style="margin-bottom:20px; ">Result</h1>
+            <div class="gnb common-result" 
+            style="font-size:20px; padding:15px;">Result of Naive Bayes:<br/>
+                <div class="{{findcolor1}}">{{result_gnb}}</div>
+            </div>
+            <div class="knn common-result" style="font-size:20px; padding:15px;">Result of KNN:<br/>
+                <div class="{{findcolor2}}">{{result_knn}}</div>
+            </div>
+            <div class="rfc common-result" style="font-size:20px; padding:15px; border-bottom:2px solid black;">Result of RandomForest:<br/>
+                <div class="{{findcolor3}}">{{result_rfc}}</div>
+            </div>
+            <div class="overall common-result" style="font-size:20px; padding:25px 0 0 0 ; margin-top:10px">Overall Result: <br/>
+                <div class="{{findcolor}}">{{result_overall}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

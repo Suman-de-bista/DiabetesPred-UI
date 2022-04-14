@@ -1,0 +1,22 @@
+{%  load static %}
+{% include 'sidebar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="{% static '\DiabetesPrediction\images\doc1.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '\DiabetesPrediction\css\app.css' %}" type="text/css" media="screen" >
+    
+</head>
+<body>
+    <div class='home' id='home'> 
+        <h1 class='home-content'>Welcome to Diabetes Prediction System</h1>
+        <h3 class='home-content'>Wanna know if you are diagnosed with Diabetes?</h3>
+        <form action="predict"><button class='home-content btn' name='predictbtn'>Predict</button></form>
+    </div>
+</body>
+</html>

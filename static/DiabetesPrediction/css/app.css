@@ -1,0 +1,278 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+}
+
+.sidebar{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  /* align-items: center; */ 
+  min-height: 100vh;
+  position: fixed;
+  border-right: 5px solid white;
+  /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url('../public/images/cover4.jfif');
+  background-size: cover; */
+  background-image: linear-gradient(rgba(230, 126, 147, 0.5), rgba(22, 178, 189, 0.5));
+}
+.sidebar ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
+  /* align-items: center; */
+  height:80vh ;
+}
+.sidebar ul a{
+  display: flex;
+  padding: 10px;
+  align-items: center;  
+  text-decoration: none;
+  font-size: 26px;
+  color: white;
+  font-weight: 600;
+}
+.sidebar ul a:hover{
+  background-color: #d17070;
+  border-radius: 18px;
+}
+.sidebar-headline{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 2px solid white;
+  box-shadow: 0 6px rgba(255,255,255,0.2);
+  color: white;
+  font-size: 18px;
+}
+
+.sidebar-headline img{
+  max-width: 60px;
+}
+.logo{
+  margin-right: 20px;
+}
+.common{
+  margin-left: 20%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(230, 126, 147, 0.5), rgba(22, 178, 189, 0.5));
+}
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(230, 126, 147, 0.5), rgba(22, 178, 189, 0.5)),
+  url('/static/DiabetesPrediction/images/doc.png  ');
+  background-size: cover;
+  margin-left: 20%;
+  min-height: 100vh;
+}
+
+.home-content{
+  padding: 10px ;
+  margin: 15px 0;
+}
+.home h1{
+  font-size: 50px;
+  text-shadow: 4px 6px rgba(0,0,0,0.2)
+}
+.home h3{
+  font-size: 25px;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text 8s steps(44) infinite ;
+  border-right: 3px solid #1976d2;
+  text-shadow: 3px 4px rgba(0,0,0,0.2);
+  background-color: #053653;
+  color: white  ;
+
+}
+@keyframes text{
+  0%{
+    width:0ch;
+  }
+  50%{
+    width: 44ch;
+  }
+}
+.home button{
+  margin-top: 25px;
+  padding: 15px 25px;
+  font-size: 20px;
+  color: white;
+  background-color: #8a183a ;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 3px 4px rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+.home button a{
+  color: white !important;
+  text-decoration: none !important;
+}
+.home form input{
+  background-color: #8a183a ;
+}
+
+.home button:hover{
+  background-color: #ce6383;
+}
+
+
+.predict{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+.predict-content{
+  display: flex;
+  flex-direction: column;
+  /* align-items: left; */
+  width: 50%;
+  min-height: 40vh;
+  /* justify-content: space-between; */
+  padding: 50px;
+  /* border: 2px solid black; */
+  background-color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin-left: 30vh;
+}
+
+.predict-content input{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  /* margin-left: 150px; */
+  width: 60% ;
+  border-radius: 4px;
+  box-shadow: 1px 2px rgba(0,0,0,0.2);
+}
+.predict-content input[type=submit]{
+  width: 20%;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  font-size: 18px;
+}
+
+.predict-content input[type=submit]:hover{
+  background-color: #053653 ;
+}
+
+.stats-header{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding:20px 0;
+  /* width: 40%; */
+}
+.common1{
+  background-color: white;
+  padding: 20px;
+  color: black;
+  height: fit-content;
+}
+.values{
+  margin-top: 10px;
+  font-size: 18px;
+  color: gray;
+}
+.total-test{
+  border-bottom: 10px solid purple;
+}
+.total-positive{
+  border-bottom: 10px solid red;
+}
+.total-negative{
+  border-bottom: 10px solid green;
+}
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 60%; */
+  height: 20vh;
+}
+.about1{
+  color: black;
+  width: 80%;
+  padding: 30px;
+  margin: 20px 30px;
+}
+.about1 h2{
+  text-align: center;
+  padding: 10px;
+}
+.row{
+  width: 35%;
+  background-color: white;
+  margin: 50px 20px 20px 60px;
+  box-shadow: 4px 6px rgba(0,0,0,0.2);
+}
+.chart-heading{
+  color: black;
+  align-items: center;
+  box-shadow: 0px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.chart-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 25px 0;
+  padding: 25px 0 ;
+  left: 25px;
+  width: 100%;
+  /* background-color: #053653; */
+}
+
+.chart-nav select{
+  padding: 10px 40px;
+  /* width: 100%; */
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 2px 3px rgba(0,0,0,0.2)
+}
+.chart-nav input{
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #1976d2;
+  box-shadow: 2px 3px rgba(0,0,0,0.2)
+
+}
+.charts{
+  display: flex;
+  justify-content: space-around;
+}

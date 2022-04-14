@@ -1,0 +1,34 @@
+{%  load static %}
+{% block nav %}
+
+<div class='sidebar'>
+    <ul>
+        <li class='sidebar-headline'>
+            <img src="{% static '\DiabetesPrediction\images\doc1.png' %}"alt='logo'/>
+            <h1>Diabetes </h1>
+            <h1>Prediction </h1>
+        </li>
+        
+        <li>
+            {% block nav-home %}
+           <a href="{% url 'home' %}">Home</a>
+           {% endblock %}
+        </li>
+        <li>
+            {% block nav-predict %}
+            <a href="{% url 'predict' %}">Predict</a>
+            {% endblock %}
+        </li>
+        <li>
+            {% block nav-stats %}
+            <a href="{% url 'stats' %}">Stats</a>
+            {% endblock %}
+        </li>
+        <li>
+            {% block nav-about %}
+            <a href="{% url 'about' %}">About</a> 
+            {% endblock %}  
+        </li>
+    </ul>
+</div>
+{% endblock %}
